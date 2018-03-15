@@ -1,11 +1,9 @@
-// Created using ICO Wizard https://github.com/poanetwork/ico-wizard by POA Network 
 pragma solidity ^0.4.11;
 
 
 /**
- * @title ERC20Basic
- * @dev Simpler version of ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/179
+
+  basic version of ERC20Token
  */
 contract ERC20Basic {
   uint256 public totalSupply;
@@ -17,8 +15,7 @@ contract ERC20Basic {
 
 
 /**
- * @title Ownable
- * @dev The Ownable contract has an owner address, and provides basic authorization control
+ * Ownable contract has an owner address, and provides basic authorization control
  * functions, this simplifies the implementation of "user permissions".
  */
 contract Ownable {
@@ -29,7 +26,7 @@ contract Ownable {
 
 
   /**
-   * @dev The Ownable constructor sets the original `owner` of the contract to the sender
+   * The Ownable constructor sets the original `owner` of the contract to the sender
    * account.
    */
   function Ownable() {
@@ -38,7 +35,7 @@ contract Ownable {
 
 
   /**
-   * @dev Throws if called by any account other than the owner.
+   * Throws if called by any account other than the owner.
    */
   modifier onlyOwner() {
     require(msg.sender == owner);
@@ -47,8 +44,8 @@ contract Ownable {
 
 
   /**
-   * @dev Allows the current owner to transfer control of the contract to a newOwner.
-   * @param newOwner The address to transfer ownership to.
+   * This allows the current owner to transfer control of the contract to a newOwner.
+   *newOwner refers to The address to transfer ownership to.
    */
   function transferOwnership(address newOwner) onlyOwner public {
     require(newOwner != address(0));
